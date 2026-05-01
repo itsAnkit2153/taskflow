@@ -28,3 +28,16 @@
     "tailwindcss": "^3.3.3"
   }
 }
+
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "node server/index.js",
+    "install-server": "npm install --prefix server"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
