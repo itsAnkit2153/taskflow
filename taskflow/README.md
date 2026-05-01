@@ -16,56 +16,7 @@ A full-stack team task manager with role-based access control (Admin & Member), 
 
 ---
 
-## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 18+
-- MongoDB Atlas account (free tier works)
-
-### 1. Clone & Install
-
-```bash
-git clone <your-repo>
-cd taskflow
-
-# Install server deps
-cd server && npm install
-
-# Install client deps
-cd ../client && npm install
-```
-
-### 2. Configure Environment
-
-```bash
-# In /server, copy and fill in values:
-cp .env.example .env
-
-# In /client, copy and fill in:
-cp .env.example .env
-```
-
-Server `.env`:
-```
-PORT=5000
-MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/taskflow
-JWT_SECRET=your_random_secret_here
-JWT_EXPIRE=7d
-CLIENT_URL=http://localhost:3000
-NODE_ENV=development
-```
-
-Client `.env`:
-```
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
-### 3. Seed Demo Data (Optional)
-
-```bash
-cd server
-node seed.js
-```
 
 Demo accounts created:
 | Email | Password | Role |
