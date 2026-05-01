@@ -23,7 +23,7 @@ Demo accounts created:
 |-------|----------|------|
 | sib@gmail.com | 123456 | Admin |
 | rohan@gmail.com | 123456| Member |
-| ankit@gmail.com | ankit123 | Member |
+| ankit@gmail.com | 123456 | Member |
 | rohan@gmail.com | 123456 | member|
 | akki@gmail.com | 123456 | member|
 
