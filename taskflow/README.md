@@ -12,7 +12,7 @@ A full-stack team task manager with role-based access control (Admin & Member), 
 | Backend | Node.js, Express.js |
 | Database | MongoDB + Mongoose |
 | Auth | JWT + bcrypt |
-| Deployment | Railway (backend), Vercel/Netlify (frontend) |
+| Deployment | Railway (backend/frontend)|
 
 ---
 
