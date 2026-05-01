@@ -75,7 +75,7 @@ taskflow/
 | GET | `/api/auth/me` | Auth | Get current user |
 
 ### Projects
-| Method | Endpoint | Access | Description |
+| Method | Endpoint | Access | Description | 
 |--------|----------|--------|-------------|
 | GET | `/api/projects` | Auth | List projects |
 | POST | `/api/projects` | Admin | Create project |
