@@ -21,9 +21,11 @@ A full-stack team task manager with role-based access control (Admin & Member), 
 Demo accounts created:
 | Email | Password | Role |
 |-------|----------|------|
-| admin@taskflow.com | password123 | Admin |
-| bob@taskflow.com | password123 | Member |
-| carol@taskflow.com | password123 | Member |
+| sib@gmail.com | 123456 | Admin |
+| rohan@gmail.com | 123456| Member |
+| ankit@gmail.com | ankit123 | Member |
+| rohan@gmail.com | 123456 | member|
+| akki@gmail.com | 123456 | member|
 
 ### 4. Run Development Servers
 
