@@ -13,7 +13,7 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build -1 $PORT",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
