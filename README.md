@@ -44,19 +44,22 @@ TaskFlow provides a structured platform for managing projects, assigning tasks, 
 
 ## 📸 Screenshots
 
-### Dashboard
+### Login
 
-![Dashboard](./screenshots/dashboard.png)
+<img width="1919" height="915" alt="login" src="https://github.com/user-attachments/assets/425285e2-fe8d-4457-beb9-e91edd1a364f" />
+
 
 ### Tasks
 
-![Tasks](./screenshots/tasks.png)
-
-### Login
-<img width="1916" height="918" alt="admin" src="https://github.com/user-attachments/assets/73aad1a4-c29c-4914-83f8-b4e421ca8912" />
+<img width="1919" height="909" alt="task" src="https://github.com/user-attachments/assets/8f756a9e-4f1e-46b2-b491-80c9714fce20" />
 
 
-![Login](./screenshots/login.png)
+### Projects
+<img width="1919" height="923" alt="projects" src="https://github.com/user-attachments/assets/bfdb7e7c-54cd-4f40-9b22-5c1ce06933aa" />
+
+
+
+
 
 ---
 
