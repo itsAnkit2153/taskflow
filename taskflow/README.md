@@ -1,43 +1,119 @@
 # ⚡ TaskFlow — Team Task Manager
 
-A full-stack team task manager with role-based access control (Admin & Member), built with React, Node.js, Express, and MongoDB.
+A full-stack team task management web application with role-based access control (Admin & Member).
+Users can create projects, assign tasks, and track progress efficiently.
+
+---
+
+## 🚀 Deployed Application
+
+🔗 https://adventurous-benevolence-production-0394.up.railway.app
+
+
+## 📌 Problem Statement
+
+Managing team tasks manually can lead to confusion, missed deadlines, and lack of accountability.
+TaskFlow provides a structured platform for managing projects, assigning tasks, and tracking progress with role-based control.
+
+---
+
+## ✨ Key Features
+
+* 🔐 Authentication (Signup/Login with JWT)
+* 👥 Role-based access (Admin / Member)
+* 📁 Project & team management
+* ✅ Task assignment with status tracking
+* 📊 Dashboard (progress, overdue tasks)
+* 🔍 Search & filter functionality
+* 🌙 Dark mode support
+* 📱 Responsive design
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer | Tech |
-|-------|------|
-| Frontend | React 18, Tailwind CSS, React Router v6 |
-| Backend | Node.js, Express.js |
-| Database | MongoDB + Mongoose |
-| Auth | JWT + bcrypt |
-| Deployment | Railway (backend/frontend)|
+| Layer      | Technology                           |
+| ---------- | ------------------------------------ |
+| Frontend   | React 18, Tailwind CSS, React Router |
+| Backend    | Node.js, Express.js                  |
+| Database   | MongoDB + Mongoose                   |
+| Auth       | JWT + bcrypt                         |
+| Deployment | Railway                              |
 
 ---
 
+## 📸 Screenshots
+
+### Login
+
+<img width="1919" height="915" alt="login" src="https://github.com/user-attachments/assets/425285e2-fe8d-4457-beb9-e91edd1a364f" />
 
 
-Demo accounts created:
-| Email | Password | Role |
-|-------|----------|------|
-| sib@gmail.com | 123456 | Admin |
-| rohan@gmail.com | 123456| Member |
-| ankit@gmail.com | 123456 | Member |
-| rohan@gmail.com | 123456 | member|
-| akki@gmail.com | 123456 | member|
+### Tasks
 
-### 4. Run Development Servers
+<img width="1919" height="909" alt="task" src="https://github.com/user-attachments/assets/8f756a9e-4f1e-46b2-b491-80c9714fce20" />
+
+
+### Projects
+<img width="1919" height="923" alt="projects" src="https://github.com/user-attachments/assets/bfdb7e7c-54cd-4f40-9b22-5c1ce06933aa" />
+
+
+
+
+
+---
+
+## 🔐 Demo Credentials
+
+| Role   | Email                                     | Password |
+| ------ | ----------------------------------------- | -------- |
+| Admin  | [sib@gmail.com](mailto:sib@gmail.com)     | 123456   |
+| Member | [rohan@gmail.com](mailto:rohan@gmail.com) | 123456   |
+| Member | [ankit@gmail.com](mailto:ankit@gmail.com) | 123456   |
+| Member | [akki@gmail.com](mailto:akki@gmail.com)   | 123456   |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone Repository
 
 ```bash
-# Terminal 1 — Backend
-cd server && npm run dev
-
-# Terminal 2 — Frontend
-cd client && npm start
+git clone https://github.com/itsAnkit2153/taskflow.git
+cd taskflow
 ```
 
-Visit: http://localhost:3000
+### 2. Install Dependencies
+
+```bash
+cd server && npm install
+cd ../client && npm install
+```
+
+### 3. Environment Variables
+
+Create `.env` file inside `server/`:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+NODE_ENV=development
+```
+
+---
+
+### 4. Run Locally
+
+```bash
+# Backend
+cd server
+npm run dev
+
+# Frontend
+cd client
+npm start
+```
 
 ---
 
@@ -45,117 +121,63 @@ Visit: http://localhost:3000
 
 ```
 taskflow/
-├── client/                    # React frontend
-│   ├── src/
-│   │   ├── components/
-│   │   │   └── layout/        # Sidebar, Layout
-│   │   ├── context/           # AuthContext, ThemeContext
-│   │   ├── pages/             # All page components
-│   │   └── utils/             # Axios instance
-│   └── public/
-│
-└── server/                    # Express backend
-    ├── controllers/           # Business logic
-    ├── middleware/            # auth.js, errorHandler.js
-    ├── models/                # User, Project, Task
-    ├── routes/                # API routes
-    ├── seed.js                # Demo data seeder
-    └── index.js               # App entry point
+├── client/        # React frontend
+├── server/        # Express backend
 ```
 
 ---
 
-## 🔌 API Endpoints
+## 🔌 API Overview
 
 ### Auth
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| POST | `/api/auth/signup` | Public | Register new user |
-| POST | `/api/auth/login` | Public | Login, returns JWT |
-| GET | `/api/auth/me` | Auth | Get current user |
+
+* POST `/api/auth/signup`
+* POST `/api/auth/login`
+* GET `/api/auth/me`
 
 ### Projects
-| Method | Endpoint | Access | Description | 
-|--------|----------|--------|-------------|
-| GET | `/api/projects` | Auth | List projects |
-| POST | `/api/projects` | Admin | Create project |
-| GET | `/api/projects/:id` | Auth | Get project |
-| PUT | `/api/projects/:id` | Admin | Update project |
-| DELETE | `/api/projects/:id` | Admin | Delete project + tasks |
+
+* Admin can create, update, delete projects
 
 ### Tasks
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| GET | `/api/tasks` | Auth | List tasks (filtered) |
-| POST | `/api/tasks` | Admin | Create task |
-| GET | `/api/tasks/:id` | Auth | Get task |
-| PUT | `/api/tasks/:id` | Auth* | Update task |
-| DELETE | `/api/tasks/:id` | Admin | Delete task |
 
-*Members can only update `status` of their own tasks
+* Admin assigns tasks
+* Members update their own task status
 
 ### Users
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| GET | `/api/users` | Admin | List all users |
-| GET | `/api/users/:id` | Auth | Get user |
-| PUT | `/api/users/:id` | Auth | Update user |
-| DELETE | `/api/users/:id` | Admin | Delete user |
 
-### Dashboard
-| Method | Endpoint | Access | Description |
-|--------|----------|--------|-------------|
-| GET | `/api/dashboard` | Auth | Get stats + recent tasks |
-
-**Query params for `/api/tasks`:**
-- `?search=keyword` — search by title
-- `?status=pending|in_progress|completed`
-- `?priority=low|medium|high`
-- `?project=<projectId>`
+* Admin manages users
 
 ---
 
 ## 🔐 Role-Based Access
 
-| Feature | Admin | Member |
-|---------|-------|--------|
-| Create/delete projects | ✅ | ❌ |
-| Create/delete tasks | ✅ | ❌ |
-| Assign tasks | ✅ | ❌ |
-| Update task status | ✅ | ✅ (own tasks) |
-| View all tasks | ✅ | ❌ (only assigned) |
-| Manage users | ✅ | ❌ |
+| Feature            | Admin | Member        |
+| ------------------ | ----- | ------------- |
+| Create Projects    | ✅     | ❌             |
+| Assign Tasks       | ✅     | ❌             |
+| Update Task Status | ✅     | ✅ (own tasks) |
+| View Tasks         | All   | Assigned only |
 
 ---
 
-## 🚢 Deployment
+## 🚀 Deployment
 
-### Backend on Railway
-
-1. Push `server/` to a GitHub repo
-2. Create new Railway project → Deploy from GitHub
-3. Add environment variables in Railway dashboard
-4. Set `NODE_ENV=production`
-
-### Frontend on Vercel
-
-1. Push `client/` to GitHub
-2. Import to Vercel
-3. Set environment variable: `REACT_APP_API_URL=https://your-railway-app.railway.app/api`
-4. Deploy
+Deployed on **Railway** (Full-stack)
 
 ---
 
-## ✨ Features
+## 📈 Future Improvements
 
-- ✅ JWT authentication with bcrypt password hashing
-- ✅ Role-based access (Admin / Member)
-- ✅ Project management with color coding and team members
-- ✅ Task management with status, priority, deadlines
-- ✅ Dashboard with stats and progress tracking
-- ✅ Search & filter tasks
-- ✅ Dark mode
-- ✅ Responsive design (mobile-first)
-- ✅ Overdue task detection
-- ✅ Inline status updates
-- ✅ Railway deployment ready
+* Real-time updates (WebSockets)
+* Notifications system
+* File attachments
+
+---
+
+## 👨‍💻 Author
+
+**Ankit Vishwakarma**
+GitHub: https://github.com/itsAnkit2153
+
+---
