@@ -7,7 +7,7 @@ Users can create projects, assign tasks, and track progress efficiently.
 
 ## 🚀 Deployed Application
 
-🔗 https://adventurous-benevolence-production-0394.up.railway.app
+🔗 https://adventurous-benevolence-production-0394.up.railway.app 
 
 
 ## 📌 Problem Statement
