@@ -9,9 +9,6 @@ Users can create projects, assign tasks, and track progress efficiently.
 
 🔗 https://adventurous-benevolence-production-0394.up.railway.app
 
----
-
----
 
 ## 📌 Problem Statement
 
@@ -56,6 +53,8 @@ TaskFlow provides a structured platform for managing projects, assigning tasks, 
 ![Tasks](./screenshots/tasks.png)
 
 ### Login
+<img width="1916" height="918" alt="admin" src="https://github.com/user-attachments/assets/73aad1a4-c29c-4914-83f8-b4e421ca8912" />
+
 
 ![Login](./screenshots/login.png)
 
@@ -88,8 +87,20 @@ cd server && npm install
 cd ../client && npm install
 ```
 
+### 3. Environment Variables
 
-### 3. Run Locally
+Create `.env` file inside `server/`:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection
+JWT_SECRET=your_secret_key
+NODE_ENV=development
+```
+
+---
+
+### 4. Run Locally
 
 ```bash
 # Backend
