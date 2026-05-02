@@ -11,10 +11,6 @@ Users can create projects, assign tasks, and track progress efficiently.
 
 ---
 
-## 🎥 Demo Video
-
-👉 https://your-video-link
-
 ---
 
 ## 📌 Problem Statement
@@ -92,20 +88,8 @@ cd server && npm install
 cd ../client && npm install
 ```
 
-### 3. Environment Variables
 
-Create `.env` file inside `server/`:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
-NODE_ENV=development
-```
-
----
-
-### 4. Run Locally
+### 3. Run Locally
 
 ```bash
 # Backend
