@@ -7,7 +7,7 @@ Users can create projects, assign tasks, and track progress efficiently.
 
 ## 🚀 Deployed Application
 
-🔗 https://adventurous-benevolence-production-0394.up.railway.app
+🔗 meticulous-healing-production-8931.up.railway.app
 
 
 ## 📌 Problem Statement
