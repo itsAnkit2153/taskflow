@@ -7,7 +7,7 @@ Users can create projects, assign tasks, and track progress efficiently.
 
 ## 🚀 Deployed Application
 
-🔗 meticulous-healing-production-8931.up.railway.app
+🔗 https://meticulous-healing-production-8931.up.railway.app
 
 
 ## 📌 Problem Statement
